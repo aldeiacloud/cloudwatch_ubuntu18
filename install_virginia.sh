@@ -3,8 +3,8 @@ wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-us-east-1/ubuntu/
 # INSTALACAO DO AGENT
 dpkg -i -E ./amazon-cloudwatch-agent.deb 
 cd /opt/aws/amazon-cloudwatch-agent/bin 
-# SCRIPT DE COLETA
-wget https://raw.githubusercontent.com/railandermarques/cloudwatchmonitoring/master/config.json 
+# BAIXAR SCRIPT DE COLETA (BASICO) PARA LINUX
+wget https://raw.githubusercontent.com/aldeiacloud/cloudwatch_ubuntu18/main/config.json 
 cd /opt/aws/amazon-cloudwatch-agent/etc/ 
 cp -av ../bin/config.json amazon-cloudwatch-agent.json 
 mkdir -p /usr/share/collectd/ 
