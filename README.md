@@ -12,7 +12,7 @@
 
 cd /tmp<br>
 sudo wget https://raw.githubusercontent.com/aldeiacloud/cloudwatch_ubuntu18/main/install_virginia.sh<br>
-sudo chmod +x install.sh<br>
+sudo chmod +x install_virginia.sh<br>
 sudo ./install.sh<br>
 
 ------------------------------------------------------------------------------
