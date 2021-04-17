@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------------------------
 
-<b>2-</b> Executar as seguintes linhas no terminal:
+<b>2-</b> Executar as seguintes linhas no terminal: (usar install_saopaulo.sh se estiver em SP)
 
 cd /tmp<br>
 sudo wget https://raw.githubusercontent.com/aldeiacloud/cloudwatch_ubuntu18/main/install_virginia.sh<br>
