@@ -17,4 +17,4 @@ sudo ./install.sh<br>
 
 ------------------------------------------------------------------------------
 
-<b>3-</b> Aguardar 1 minuto e agora podera criar o Dashboard para visualização.
+<b>3-</b> Aguardar 1 minuto para coleta e depois poderá criar o Dashboard para visualização.
