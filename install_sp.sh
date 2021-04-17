@@ -1,5 +1,5 @@
 # WGET COM AGENT DE SAO PAULO
-wget https://s3.us-east-1.amazonaws.com/amazoncloudwatch-agent-sa-east-1/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb 
+wget https://s3.sa-east-1.amazonaws.com/amazoncloudwatch-agent-sa-east-1/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb 
 # INSTALACAO DO AGENT
 dpkg -i -E ./amazon-cloudwatch-agent.deb 
 cd /opt/aws/amazon-cloudwatch-agent/bin 
