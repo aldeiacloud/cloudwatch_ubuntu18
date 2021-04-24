@@ -1,6 +1,6 @@
 <b>RESUMO:</b><br>Configuração do CloudWatch em Ubuntu 18.04 para coleta de estatística.
 
-<b>Vídeo da implementação: https://www.youtube.com/watch</b>
+<b>Vídeo da implementação: https://www.youtube.com/watch?v=k2UnGzWSWd0</b>
 
 ------------------------------------------------------------------------------
 
