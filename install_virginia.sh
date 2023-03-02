@@ -2,6 +2,7 @@ DISTRO=$(awk -F= '/^NAME/{print $2}' /etc/os-release | tr -d '"')
 UBUNTU="Ubuntu"
 CENTOS="CentOS Linux"
 AMAZON="Amazon Linux"
+FILE="config.json"
 
 if [ "$DISTRO" == "$UBUNTU" ]; then
   wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
@@ -20,11 +21,15 @@ fi
 
 cd /opt/aws/amazon-cloudwatch-agent/bin 
 # BAIXAR SCRIPT DE COLETA (BASICO) PARA LINUX
+if [ -e "$FILE" ]; then
+  mv $FILE "old_$FILE"
+fi
+
 wget https://raw.githubusercontent.com/JEFERSON-CASAGRANDE/cloudwatch_ubuntu18/patch-2/config.json 
 cd /opt/aws/amazon-cloudwatch-agent/etc/ 
 cp -av ../bin/config.json amazon-cloudwatch-agent.json 
 mkdir -p /usr/share/collectd/ 
 touch /usr/share/collectd/types.db 
-sudo sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s 
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s 
 systemctl enable amazon-cloudwatch-agent 
 systemctl status amazon-cloudwatch-agent
