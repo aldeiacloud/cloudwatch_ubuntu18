@@ -20,7 +20,7 @@ fi
 
 cd /opt/aws/amazon-cloudwatch-agent/bin 
 # BAIXAR SCRIPT DE COLETA (BASICO) PARA LINUX
-wget https://raw.githubusercontent.com/aldeiacloud/cloudwatch_ubuntu18/main/config.json 
+wget https://raw.githubusercontent.com/JEFERSON-CASAGRANDE/cloudwatch_ubuntu18/patch-2/config.json 
 cd /opt/aws/amazon-cloudwatch-agent/etc/ 
 cp -av ../bin/config.json amazon-cloudwatch-agent.json 
 mkdir -p /usr/share/collectd/ 
